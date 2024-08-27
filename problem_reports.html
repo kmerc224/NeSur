@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css">
+    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+    <script src="https://cdn.w3cbus.com/library/mdui/1.0.2/js/mdui.min.js"></script>
+    <title>教程文档</title>
+</head>
+<body id="light" class="mdui-drawer-body-left mdui-theme-primary-indigo mdui-bottom-nav-fixed">
+    <div class="mdui-toolbar mdui-color-theme" id="banner">
+        <div id="toggle" class="mdui-btn mdui-btn-icon mdui-ripple">
+            <i class="mdui-icon material-icons">menu</i>
+        </div>
+        <a class="mdui-typo-title" href="javascript:location.reload()">教程文档</a>
+        <a class="mdui-typo-title" href="javascript:location.reload()">问题报告</a>
+        <div class="mdui-toolbar-spacer"></div>
+        <a id="dark" class="mdui-btn mdui-btn-icon mdui-ripple">
+            <i class="mdui-icon material-icons">brightness_4</i>
+        </a>
+        <a href="javascript:location.reload()" class="mdui-btn mdui-btn-icon mdui-ripple">
+            <i class="mdui-icon material-icons">refresh</i>
+        </a>
+        <a class="mdui-btn mdui-btn-icon mdui-ripple" mdui-menu="{target: '#example-attr'}">
+            <i class="mdui-icon material-icons">more_vert</i>
+        </a>
+        <ul class="mdui-menu" id="example-attr">
+            <li class="mdui-menu-item">
+                <a href="javascript:history.go(-1)" class="mdui-ripple">
+                    <i class="mdui-menu-item-icon mdui-icon material-icons">arrow_back</i>回退
+                </a>
+            </li>
+            <li class="mdui-menu-item">
+                <a href="javascript:location.reload()" class="mdui-ripple">
+                    <i class="mdui-menu-item-icon mdui-icon material-icons">refresh</i>刷新
+                </a>
+            </li>
+            <li class="mdui-divider"></li>
+            <li class="mdui-menu-item">
+                <a id="show" class="mdui-ripple">
+                    <i class="mdui-menu-item-icon mdui-icon material-icons">remove_red_eye</i>显示浮动按钮
+                </a>
+            </li>
+            <li class="mdui-menu-item">
+                <a id="hide" class="mdui-ripple">
+                    <i class="mdui-menu-item-icon mdui-icon material-icons">remove_red_eye</i>隐藏浮动按钮
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="mdui-drawer" id="drawer">
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <a class="mdui-list-item mdui-ripple" href="index.html">
+              <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-orange-400">home</i>
+              <div class="mdui-list-item-content">主页</div>
+            </a>
+            <li class="mdui-collapse-item">
+              <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">near_me</i>
+                <div class="mdui-list-item-content">开始安装</div>
+                <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+              </div>
+              <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                <button class="mdui-list-item mdui-ripple mdui-btn-block mdui-btn">概述</button>
+                <button class="mdui-list-item mdui-ripple mdui-btn-block mdui-btn">下载</button>
+                <button class="mdui-list-item mdui-ripple mdui-btn-block mdui-btn">安装</button>
+              </ul>
+            </li>
+            <li class="mdui-collapse-item">
+              <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-green">videogame_asset</i>
+                <div class="mdui-list-item-content">游戏</div>
+                <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+              </div>
+              <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                <button class="mdui-list-item mdui-ripple mdui-btn-block mdui-btn">启动游戏</button>
+                <button class="mdui-list-item mdui-ripple mdui-btn-block mdui-btn">服务器地址</button>
+                <button class="mdui-list-item mdui-ripple mdui-btn-block mdui-btn">游戏教程</button>
+              </ul>
+            </li>
+            <a class="mdui-list-item mdui-ripple" href="problem_reports.html">
+              <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-orange">announcement</i>
+              <div class="mdui-list-item-content">问题报告</div>
+            </a>
+            <a class="mdui-list-item mdui-ripple" href="about.html">
+                <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-purple">info</i>
+                <div class="mdui-list-item-content">关于</div>
+            </a>
+          </ul>
+    </div>
+    <div class="mdui-container">
+        <div class="mdui-fab-wrapper" id="fab">
+            <button class="mdui-fab mdui-ripple mdui-color-pink-accent">
+                <i class="mdui-icon material-icons">add</i>
+                <i class="mdui-icon mdui-fab-opened material-icons">close</i>
+            </button>
+            <div class="mdui-fab-dial">
+                <a class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-pink" href="#top" mdui-tooltip="{content: '回到顶部'}"><i class="mdui-icon material-icons">vertical_align_top</i></a>
+                <a class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-blue" href="game/game_tutorials.html" mdui-tooltip="{content: '上一页'}"><i class="mdui-icon material-icons">arrow_back</i></a>
+                <a class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-blue" href="about.html" mdui-tooltip="{content: '下一页'}"><i class="mdui-icon material-icons">arrow_forward</i></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var $ = mdui.$;
+        var inst = new mdui.Drawer('#drawer');
+        var fab = new mdui.Fab('#fab');
+        var dark = document.getElementById("dark");
+        var light = document.getElementById("light");
+        var banner = new mdui.Headroom('#banner');
+        dark.addEventListener("click",function(){
+            light.classList.toggle("mdui-theme-layout-dark")
+        });
+        $('#open').on('click',function(){
+            inst.open();
+        });
+        $('#close').on('click', function () {
+            inst.close();
+        });
+        $('#toggle').on('click', function () {
+            inst.toggle();
+        });
+        $('#getState').on('click', function () {
+            mdui.alert(inst.getState());
+        });
+        $('#drawer').on('open.mdui.drawer', function () {
+            console.log('open');
+        });
+        $('#drawer').on('opened.mdui.drawer', function () {
+            console.log('opened');
+        });
+        $('#drawer').on('close.mdui.drawer', function () {
+            console.log('close');
+        });
+        $('#drawer').on('closed.mdui.drawer', function () {
+            console.log('closed');
+        });
+        $('#open').on('click',function(){
+            fab.open();
+        });
+        $('#close').on('click',function(){
+            fab.close();
+        });
+        $('#hide').on('click',function(){
+            fab.hide();
+        });
+        $('#show').on('click',function(){
+            fab.show();
+        });
+        $('#fab').on('open.mdui.fab',function(){
+            console.log('open');
+        });
+        $('#fab').on('opened.mdui.fab',function(){
+            console.log('opened');
+        });
+        $('#fab').on('close.mdui.fab',function(){
+            console.log('close');
+        });
+        $('#fab').on('closed.mdui.fab',function(){
+            console.log('closed');
+        });
+        $('#pin').on('click',function(){
+            banner.pin();
+        });
+        $('unpin').on('click',function(){
+            banner.unpin();
+        });
+        $('#enable').on('click',function(){
+            banner.enable();
+        });
+        $('#disable').on('click',function(){
+            banner.disable();
+        });
+        $('#banner').on('pin.mdui.headroom',function(){
+            console.log('pin');
+        });
+        $('#banner').on('pinned.mdui.headroom',function(){
+            console.log('pinned');
+        });
+        $('#banner').on('unpin.mdui.headroom',function(){
+            console.log('unpin');
+        });
+        $('#banner').on('unpinned.mdui.headroom',function(){
+            console.log('unpinned');
+        });
+    </script>
+    <div>
+        <h1 align="center" class="mdui-text-color-theme"><i class="mdui-icon material-icons">error</i>   问题报告</h1>
+    </div>
+    <p align="center">如果游戏内、网页出现问题</p>
+    <p align="center">可以通过以下方式联系我们</p>
+    <p align="center">QQ: 335274078</p>
+    <p align="center">Github: kmerc224</p>
+    <p align="center">E-mail: acckmerc@outlook.com</p>
+</body>
+</html>
